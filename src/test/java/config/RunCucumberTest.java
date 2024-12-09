@@ -1,4 +1,4 @@
-package config.support;
+package config;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;

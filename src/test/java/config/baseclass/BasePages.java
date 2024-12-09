@@ -1,4 +1,13 @@
 package config.baseclass;
 
-public class BasePages {
+import org.openqa.selenium.WebDriver;
+
+public class BasePages
+{
+    protected WebDriver driver;
+
+    public BasePages()
+    {
+        this.driver = BaseSteps.browser;
+    }
 }
