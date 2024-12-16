@@ -5,27 +5,33 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import pages.HomePage;
+import pages.LoginPage;
+import pages.ProdutosPage;
 
 public class CarrinhoSteps extends BaseSteps
 {
     HomePage homePage = new HomePage();
+    LoginPage loginPage = new LoginPage();
+    ProdutosPage produtoPage = new ProdutosPage();
 
-    @Dado("que um usuario cadastrado esta na home do site Shopee")
-    public void que_um_usuário_cadastrado_esta_na_home_do_site_shopee()
-    {
-
+    @Dado("que um usuario cadastrado esta na home do site Kabum")
+    public void que_um_usuário_cadastrado_esta_na_home_do_site_shopee() throws InterruptedException {
+        homePage.abrirSite();
+        Thread.sleep(3000);
     }
 
     @Quando("o usuario busca o produto {string}")
-    public void o_usuario_busca_o_produto(String string)
-    {
-
+    public void o_usuario_busca_o_produto(String _texto) throws InterruptedException {
+        Thread.sleep(3000);
+        homePage.pesquisar(_texto);
+        Thread.sleep(1000);
+        homePage.clickPesquisar();
     }
 
     @Entao("o usuario entra na pagina do produto desejado")
-    public void o_usuário_entra_na_pagina_do_produto_desejado()
-    {
-
+    public void o_usuário_entra_na_pagina_do_produto_desejado() throws InterruptedException {
+        produtoPage.clicarProduto();
+        Thread.sleep(2000);
     }
 
     @Entao("adiciona o produto no carrinho de compras")

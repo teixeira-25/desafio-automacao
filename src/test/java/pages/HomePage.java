@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 
 public class HomePage extends BasePages
 {
-    String urlSite = "https://shopee.com.br/";
-    By barraDePesquisa = new By.ByXPath("//*[@id=\"sll2-ShopeeHeaderWithSearch\"]//input");
-    By btnPesquisar = new By.ByXPath("//*[@id=\"main\"]/div/div[2]/div/div/div/div/section/div/div/div[2]/form/button");
+    String urlSite = "https://www.kabum.com.br/";
+    By barraDePesquisa = new By.ById("input-busca");
+    By btnPesquisar = new By.ByCssSelector("#barraBuscaKabum button");
 
     public void abrirSite()
     {

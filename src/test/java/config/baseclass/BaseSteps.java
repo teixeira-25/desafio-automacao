@@ -14,6 +14,7 @@ public class BaseSteps
     public static WebDriver browser;
     public static Scenario scenario;
 
+
     public static void abrirBrowser()
     {
         if (browser != null) return;
