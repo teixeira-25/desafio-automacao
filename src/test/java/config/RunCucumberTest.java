@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/scenarios",	            // Path: features = "classpath:features"
+        features = "src/test/resources",        	            // Path: features = "classpath:features"
         glue = "steps",					                        // Path: Steps
         monochrome = false,							            // Cores no Terminal default: false
         snippets = CucumberOptions.SnippetType.UNDERSCORE,		// METHODOS do Steps em CAMELCASE
-        dryRun = false,								            // Validar Steps sem executar o teste
+        dryRun = true,								            // Validar Steps sem executar o teste
         plugin = {									            // Plugins Cucumber para possivel integracao com Jenkins
                 "pretty",
                 "html:target/cucumber/index.html",
